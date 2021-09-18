@@ -1,0 +1,35 @@
+{
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "clean": "tsc --build tsconfig.build.json --clean",
+    "lint": "eslint --ext .js,.ts,.tsx .",
+    "postinstall": "yarn build; husky install",
+    "postpublish": "pinst --enable",
+    "prepublishOnly": "pinst --disable",
+    "publish-canary": "np prerelease --tag=canary",
+    "publish-stable": "np",
+    "start": "node dist",
+    "test": "jest",
+    "typecheck": "tsc --project tsconfig.json"
+  },
+  "devDependencies": {
+    "@tsconfig/node14": "^1.0.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.9.2",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "eslint-files": "^1.0.0",
+    "eslint-plugin-diff": "^1.0.12",
+    "eslint-plugin-jest": "^24.4.2",
+    "husky": "^7.0.2",
+    "jest": "^27.2.0",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.3"
+  }
+}
