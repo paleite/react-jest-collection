@@ -2,6 +2,7 @@ const { eslintFiles } = require("eslint-files");
 
 module.exports = {
   "*.js": [
+    "cspell",
     () => "tsc --project tsconfig.eslint.json",
     "jest --bail --findRelatedTests",
     /** @param {string[]} files */
@@ -12,8 +13,9 @@ module.exports = {
     "prettier --write",
   ],
   "*.json": "prettier --write",
-  "*.md": "prettier --write",
+  "*.md": ["cspell", "prettier --write"],
   "*.ts?(x)": [
+    "cspell",
     () => "yarn run typecheck",
     "jest --bail --findRelatedTests",
     /** @param {string[]} files */
