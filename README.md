@@ -4,7 +4,9 @@ Write your React integration-tests using battle-tested test-examples
 
 ## Scenario
 
-You are tasked to create tests for your employer and are looking for some pre-existing test-examples which use current best practices. That's where this repo comes in.
+You are tasked to create tests for your employer and are looking for some
+pre-existing test-examples which use current best practices. That's where this
+repo comes in.
 
 ## Key points
 
