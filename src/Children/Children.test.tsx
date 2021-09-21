@@ -7,7 +7,7 @@ import { render, screen } from "@testing-library/react";
 
 test("renders children when provided", () => {
   render(<Children>mock string</Children>);
-  expect(screen.getByText(/mock string/i)).toBeInTheDocument();
+  expect(screen.getByText(/mock string/iu)).toBeInTheDocument();
 });
 
 test("renders with multiple children", () => {
@@ -18,8 +18,8 @@ test("renders with multiple children", () => {
     </Children>
   );
 
-  expect(screen.getByText(/mock heading/i)).toBeInTheDocument();
-  expect(screen.getByText(/mock paragraph/i)).toBeInTheDocument();
+  expect(screen.getByText(/mock heading/iu)).toBeInTheDocument();
+  expect(screen.getByText(/mock paragraph/iu)).toBeInTheDocument();
 });
 
 test("renders without children when omitted", () => {

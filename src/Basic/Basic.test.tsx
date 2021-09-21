@@ -7,6 +7,6 @@ import { render, screen } from "@testing-library/react";
 
 it("renders a component with static content", () => {
   render(<Basic />);
-  const textElement = screen.getByText(/hello, world/i);
+  const textElement = screen.getByText(/hello, world/iu);
   expect(textElement).toBeInTheDocument();
 });
