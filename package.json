@@ -2,7 +2,7 @@
   "name": "react-jest-collection",
   "version": "1.0.0",
   "private": true,
-  "description": "Write your React integration-tests using battle-tested test-examples",
+  "description": "Write your React integration tests using battle-tested test-examples",
   "keywords": [],
   "homepage": "https://github.com/paleite/react-jest-collection#readme",
   "bugs": {

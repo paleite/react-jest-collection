@@ -1,6 +1,6 @@
 # react-jest-collection
 
-Write your React integration-tests using battle-tested test-examples
+Write your React integration tests using battle-tested test-examples
 
 ## Scenario
 
