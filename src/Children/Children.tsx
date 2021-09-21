@@ -1,5 +1,3 @@
-const Children: React.FunctionComponent = ({ children }) => {
-  return <>{children}</>;
-};
+const Children: React.FunctionComponent = ({ children }) => <>{children}</>;
 
 export { Children };

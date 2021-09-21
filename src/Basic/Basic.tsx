@@ -1,5 +1,3 @@
-const Basic: React.FunctionComponent = () => {
-  return <>Hello, world!</>;
-};
+const Basic: React.FunctionComponent = () => <>Hello, world!</>;
 
 export { Basic };
