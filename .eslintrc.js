@@ -32,6 +32,7 @@ const config = {
     curly: ["error", "all"],
 
     "import/exports-last": "error",
+    "import/no-extraneous-dependencies": "error",
     "import/no-default-export": "error",
     "import/group-exports": "error",
     "import/newline-after-import": "warn",
