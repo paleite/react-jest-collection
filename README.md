@@ -28,6 +28,6 @@ repo comes in.
 - [ ] MSW
 - [ ] SSR
 - [ ] Reducers
-- [ ] React hooks
 - [ ] useCallback
 - [ ] ErrorBoundary
+- [x] React hooks
