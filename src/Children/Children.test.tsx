@@ -18,7 +18,9 @@ test("renders with multiple children", () => {
     </Children>
   );
 
-  expect(screen.getByText(/mock heading/iu)).toBeInTheDocument();
+  expect(
+    screen.getByRole("heading", { name: /mock heading/iu })
+  ).toBeInTheDocument();
   expect(screen.getByText(/mock paragraph/iu)).toBeInTheDocument();
 });
 
