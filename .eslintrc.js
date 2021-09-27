@@ -94,22 +94,11 @@ const config = {
 
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
+
+    // JEST
+
+    "testing-library/prefer-user-event": "error",
   },
-
-  overrides: [
-    {
-      files: ["src/next.js/**/*.tsx"],
-
-      rules: {
-        /**
-         * Next.js consumes the `default` export, and certain exported functions
-         * (e.g. `getServerSideProps`), causing `import/no-unused-modules` to
-         * report a false-positive, so we disable it for all Next.js-pages.
-         */
-        "import/no-unused-modules": "off",
-      },
-    },
-  ],
 };
 
 /** @type import("eslint").Linter.ConfigOverride<import("eslint").Linter.RulesRecord>[] */
@@ -164,6 +153,20 @@ const overrides = [
       "plugin:jest-dom/recommended",
       "plugin:testing-library/react",
     ],
+  },
+
+  {
+    files: ["src/next.js/**/*.tsx"],
+
+    rules: {
+      "import/no-default-export": "off",
+      /**
+       * Next.js consumes the `default` export, and certain exported functions
+       * (e.g. `getServerSideProps`), causing `import/no-unused-modules` to
+       * report a false-positive, so we disable it for all Next.js-pages.
+       */
+      "import/no-unused-modules": "off",
+    },
   },
 ];
 

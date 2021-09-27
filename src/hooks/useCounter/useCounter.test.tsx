@@ -2,8 +2,9 @@
  * @jest-environment jsdom
  */
 import "@testing-library/jest-dom";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { act, renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
 import * as React from "react";
 import { useCounter } from "./useCounter";
 
@@ -25,7 +26,7 @@ describe("useCounter (component)", () => {
     const heading = screen.getByRole("heading");
 
     expect(heading).toHaveTextContent("Count: 0");
-    fireEvent.click(button);
+    userEvent.click(button);
     expect(heading).toHaveTextContent("Count: 1");
   });
 });
