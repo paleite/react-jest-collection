@@ -15,7 +15,6 @@ module.exports = {
   preset: "ts-jest",
   // All tests are located below the `src` directory.
   roots: ["src"],
-  // Configure testing-library to be fail the tests when there are better
-  // queries that can be used.
-  // setupFiles: ["./config/setup-tests.ts"],
+  // Extra configuration (not required for your repo)
+  setupFilesAfterEnv: ["./config/setup-tests-after-env.ts"],
 };
